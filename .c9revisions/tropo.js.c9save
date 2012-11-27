@@ -1,3 +1,0 @@
-{"ts":1352423932174,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"call(\"+1\" + number);\nsay(messageToSay);"]],"start1":0,"start2":0,"length1":0,"length2":39}]],"length":39}
-{"contributors":[],"silentsave":false,"ts":1352424093157,"patch":[[{"diffs":[[0,"umber);\n"],[1,"record(\".\", {\n    beep: false,\n    timeout: 10,\n    silenceTimeout: 1,\n    maxTime: 10\n});\n"],[0,"say(mess"]],"start1":13,"start2":13,"length1":16,"length2":107}]],"length":130,"saved":false}
-{"ts":1352424245625,"patch":[[{"diffs":[[0,"meout: 1"],[-1,"0"],[0,",\n    si"]],"start1":58,"start2":58,"length1":17,"length2":16}]],"length":129,"saved":false}
