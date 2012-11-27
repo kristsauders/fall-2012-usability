@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Krists Auders</title>
+        <meta name="description" content="krists auders resume">
+        <meta http-equiv="content-language" content="en" />
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" href="bootstrap-responsive.min.css">
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <link rel="stylesheet" href="reveal.css">
+        <script src="jquery.reveal.js" type="text/javascript"></script>
+        <script src="main.js"></script>
+        <style>
+            body {
+                background-image:url('crissXcross.png');
+                background-repeat:repeat;
+                background-attachment:fixed;
+                padding-top: 0px;
+                padding-bottom: 40px;
+            }
+            .string { color: green; }
+            .number { color: dark#BDBDBD; }
+            .boolean { color: #BDBDBD; }
+            .null { color: magenta; }
+            .key { color: red; }
+            .ui-widget-overlay {
+               background: #111111;
+               opacity: .80;
+               filter: Alpha(Opacity=80);
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+
+        <!-- Top Navigation Bar -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#" id="homeNavbar">Krists Auders</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active" id="home"><a href="#">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<br/><br/><br/>
+
+        <!-- Main Resume Container -->
+        <div class="container" id="main">
+
+            <div class="row">
+                <div align="center" class="span12" id="resume" style="background-color: #eeeeee;-webkit-border-radius: 6px;padding-bottom:20px;
+                                                            -moz-border-radius: 6px;border-radius: 6px;margin-bottom: 30px;">
+                    <br/>
+                    <h2>Contact Me! (Task 1)</h2>
+                    <button class="btn btn-large btn-primary" id="textMe">Send Me a Text Message (Task 2)</button> <br/>
+                    <button class="btn btn-large btn-primary" id="getText">Receive Text Message (Task 3)</button> <br/>
+                    <button class="btn btn-large btn-primary" id="locateMe">See Where I Am (Task 5)</button> <br/>
+                    <button class="btn btn-large btn-primary" id="getCall">Receive Call (Task 6)</button> <br/>
+                    <button class="btn btn-large btn-primary" id="donate">Donate (Task 7)</button> <br/>
+                    <button class="btn btn-large btn-primary" id="speech">Send Me Speech (Task 8)</button> <br/> 
+                </div>
+            </div>
+        </div>
+        
+        <div id="textMeModal" class="reveal-modal small" align="center">
+            <h2>Text Me</h2>
+            <input class="field span2" id="textMeNumber" type="text" title="Your Number" value="Your Number" onkeydown="if (event.keyCode == 13){event.preventDefault();  $('#textMeSubmit').click()}"></input> <br/>
+            <textarea class="field span2" rows="3" id="textMeMessage" type="text" title="Your Message Here" onkeydown="if (event.keyCode == 13){event.preventDefault();  $('#textMeSubmit').click()}">Your Message Here</textarea> <br/>
+            <button id="textMeSubmit" class="btn btn-success btn-large" >Send Text Message »</button><br/>
+            <a class="close-reveal-modal">&#215;</a>
+        </div>
+        
+        <div id="getTextModal" class="reveal-modal small" align="center">
+            <h2>Receive Text Message</h2>
+            <input class="field span2" id="getTextNumber" type="text" title="Phone Number" value="Phone Number" onkeydown="if (event.keyCode == 13){event.preventDefault();  $('#getTextSubmit').click()}"></input> <br/>
+            <button id="getTextSubmit" class="btn btn-success btn-large" >Send Text Message »</button><br/>
+            <a class="close-reveal-modal">&#215;</a>
+        </div>
+        
+        <div id="locateMeModal" class="reveal-modal small" align="center">
+            <h2>Map Here</h2>
+            <iframe width="300" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1818+E+Madison+St,+Seattle,+WA&amp;aq=0&amp;oq=1818+e&amp;sll=47.613028,-122.342064&amp;sspn=0.436504,0.979156&amp;ie=UTF8&amp;hq=&amp;hnear=1818+E+Madison+St,+Seattle,+King,+Washington+98122&amp;t=m&amp;z=14&amp;ll=47.616915,-122.307897&amp;output=embed"></iframe>
+            <br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=1818+E+Madison+St,+Seattle,+WA&amp;aq=0&amp;oq=1818+e&amp;sll=47.613028,-122.342064&amp;sspn=0.436504,0.979156&amp;ie=UTF8&amp;hq=&amp;hnear=1818+E+Madison+St,+Seattle,+King,+Washington+98122&amp;t=m&amp;z=14&amp;ll=47.616915,-122.307897" 
+            style="color:#0000FF;text-align:left">View Larger Map</a></small>
+        </div>
+        
+        <div id="getCallModal" class="reveal-modal small" align="center">
+            <h2>Receive Phone Call Recording</h2>
+            <input class="field span2" id="getCallNumber" type="text" title="Phone Number" value="Phone Number" onkeydown="if (event.keyCode == 13){event.preventDefault(); $('#getCallSubmit').click()}"></input> <br/>
+            <button id="getCallSubmit" class="btn btn-success btn-large" >Call With Recording »</button><br/>
+            <a class="close-reveal-modal">&#215;</a>
+        </div>
+        
+        <div id="donateModal" class="reveal-modal small" align="center">
+            <h2>Map Here</h2>
+        </div>
+        
+        <div id="speechModal" class="reveal-modal small" align="center">
+            <h2>Speech Stuff Here</h2>
+        </div>
+        
+        <div id="thankYouModal" class="reveal-modal small" align="center">
+            <h2>Thank You!</h2>
+            <a class="close-reveal-modal">&#215;</a>
+        </div>
+
+        <!-- Import Twitter Bootstrap -->
+        <script src="bootstrap.min.js"></script>
+    </body>
+</html>
