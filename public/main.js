@@ -73,11 +73,28 @@
                 });
                 $("#getCallSubmit").click(function() {
                     $('#getCallSubmit').addClass("disabled loading");
-
+                    $.ajax({
+                        url: '/getCall',
+                        type: 'post',
+                        data: {
+                            "number": $('#getCallNumber').val()
+                        },
+                        success: function(data) {
+                            $('#getCallSubmit').removeClass("disabled loading");
+                            $('#getCallModal').trigger('reveal:close-first');
+                            $('#thankYouModal').reveal(options);
+                            setTimeout(function() {
+                                $('#thankYouModal').trigger('reveal:close');
+                            }, 2000);
+                        },
+                        error: function(jqXHR, textStatus, error) {
+                            alert('There was an error placing the call.');
+                        }
+                    });
                 });
                 $("#donate").click(function(e) {
                     e.preventDefault();
-                    $('#donateModal').reveal(options);
+                    window.location = '/donate';
                 });
                 $("#donateSubmit").click(function() {
                     $('#donateSubmit').addClass("disabled loading");

@@ -50,6 +50,38 @@ app.get('/locateMe', function(req, res) {
     });
 });
 
+app.post('/getCall', function(req, res) {
+    console.log('Calling ' + req.body.number);
+    rest.post('https://api.att.com/rest/1/Sessions', {
+            data: "number=" + req.body.number.replace(/-/g, "").replace(/ /g, "").replace("tel:", "").replace("(","").replace(")","") + "&messageToSay=Hello%2C%20this%20is%20a%20call%20with%20my%20information%20for%20Task%206.",
+            headers: {
+                "Authorization": "BEARER " + access_token,
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Accept": "application/json"
+            }
+        }).on('complete', function(data) {
+            console.log(data);
+            res.send(200);
+    });
+});
+
+app.get('/donate', function(req, res) {
+    rest.post('https://api.att.com/Security/Notary/Rest/1/SignedPayload', {
+            headers: {
+                "Client_id": "42d5fa46a2b4df9376e3eb68996d5b8b",
+                "Client_secret": "75a316ff9b55681b",
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            data: {
+                "hello":"world"
+            }
+        }).on('complete', function(data) {
+            console.log(data);
+            res.send(data);
+    });
+});
+
 rest.post('https://api.att.com/oauth/token', {
     data: {
         "client_id": "42d5fa46a2b4df9376e3eb68996d5b8b",
@@ -63,6 +95,7 @@ rest.post('https://api.att.com/oauth/token', {
 });
 
 // Listen only from localhost, since this will be routed through a local Nginx proxy
-app.listen(8084);
+var port = process.env.PORT || 8084;
+app.listen(port);
 
 console.log('Started up successfully.');

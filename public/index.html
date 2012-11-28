@@ -20,7 +20,6 @@
             body {
                 background-image:url('crissXcross.png');
                 background-repeat:repeat;
-                background-attachment:fixed;
                 padding-top: 0px;
                 padding-bottom: 40px;
             }
@@ -47,8 +46,6 @@
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
                     </a>
                     <a class="brand" href="#" id="homeNavbar">Krists Auders</a>
                     <div class="nav-collapse collapse">
@@ -68,14 +65,39 @@
             <div class="row">
                 <div align="center" class="span12" id="resume" style="background-color: #eeeeee;-webkit-border-radius: 6px;padding-bottom:20px;
                                                             -moz-border-radius: 6px;border-radius: 6px;margin-bottom: 30px;">
-                    <br/>
+                    
                     <h2>Contact Me! (Task 1)</h2>
-                    <button class="btn btn-large btn-primary" id="textMe">Send Me a Text Message (Task 2)</button> <br/>
-                    <button class="btn btn-large btn-primary" id="getText">Receive Text Message (Task 3)</button> <br/>
-                    <button class="btn btn-large btn-primary" id="locateMe">See Where I Am (Task 5)</button> <br/>
-                    <button class="btn btn-large btn-primary" id="getCall">Receive Call (Task 6)</button> <br/>
-                    <button class="btn btn-large btn-primary" id="donate">Donate (Task 7)</button> <br/>
-                    <button class="btn btn-large btn-primary" id="speech">Send Me Speech (Task 8)</button> <br/> 
+                    <h5>I live in Seattle, it rains a lot there.</h5>
+                    <hr style="width:60%;background-color:#BDBDBD;height:1px;"/>
+                    <div class="row">
+                        <div class="span3 offset3"><h5 class="muted">Send me a text message, right from this app!</h5></div>
+                        <div class="span3"><button class="btn btn-large btn-primary" id="textMe">Text Me (Task 2)</button></div>
+                    </div>
+                    <hr style="width:60%;background-color:#BDBDBD;height:1px;"/>
+                    <div class="row">
+                        <div class="span3 offset3"><h5 class="muted">Receive a text message to your phone, with my contact information.</h5></div>
+                        <div class="span3"><button class="btn btn-large btn-primary" id="getText">Get My Info (Task 3)</button></div>
+                    </div>
+                    <hr style="width:60%;background-color:#BDBDBD;height:1px;"/>
+                    <div class="row">
+                        <div class="span3 offset3"><h5 class="muted">See exactly where I am right now, to schedule a meeting nearby.</h5></div>
+                        <div class="span3"><button class="btn btn-large btn-primary" id="locateMe">Find Me (Task 5)</button></div>
+                    </div>
+                    <hr style="width:60%;background-color:#BDBDBD;height:1px;"/>
+                    <div class="row">
+                        <div class="span3 offset3"><h5 class="muted">Get a phone call or voicemail with my contact details, instantly.</h5></div>
+                        <div class="span3"><button class="btn btn-large btn-primary" id="getCall">Get My Info (Task 6)</button></div>
+                    </div>
+                    <hr style="width:60%;background-color:#BDBDBD;height:1px;"/>
+                    <div class="row">
+                        <div class="span3 offset3"><h5 class="muted">Donate 99 cents for further development of my app!</h5></div>
+                        <div class="span3"><button class="btn btn-large btn-primary" id="donate">Donate (Task 7)</button></div>
+                    </div>
+                    <hr style="width:60%;background-color:#BDBDBD;height:1px;"/>
+                    <div class="row">
+                        <div class="span3 offset3"><h5 class="muted">You can even record a voice message to be delivered to me, right in your browser.</h5></div>
+                        <div class="span3"><button class="btn btn-large btn-primary" id="speech">Record Message (Task 8)</button></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -96,8 +118,8 @@
         </div>
         
         <div id="locateMeModal" class="reveal-modal small" align="center">
-            <h2>Map Here</h2>
-            <iframe width="300" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1818+E+Madison+St,+Seattle,+WA&amp;aq=0&amp;oq=1818+e&amp;sll=47.613028,-122.342064&amp;sspn=0.436504,0.979156&amp;ie=UTF8&amp;hq=&amp;hnear=1818+E+Madison+St,+Seattle,+King,+Washington+98122&amp;t=m&amp;z=14&amp;ll=47.616915,-122.307897&amp;output=embed"></iframe>
+            <h2>The Map</h2>
+            <iframe width="180" height="180" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=1818+E+Madison+St,+Seattle,+WA&amp;aq=0&amp;oq=1818+e&amp;sll=47.613028,-122.342064&amp;sspn=0.436504,0.979156&amp;ie=UTF8&amp;hq=&amp;hnear=1818+E+Madison+St,+Seattle,+King,+Washington+98122&amp;t=m&amp;z=14&amp;ll=47.616915,-122.307897&amp;output=embed"></iframe>
             <br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=1818+E+Madison+St,+Seattle,+WA&amp;aq=0&amp;oq=1818+e&amp;sll=47.613028,-122.342064&amp;sspn=0.436504,0.979156&amp;ie=UTF8&amp;hq=&amp;hnear=1818+E+Madison+St,+Seattle,+King,+Washington+98122&amp;t=m&amp;z=14&amp;ll=47.616915,-122.307897" 
             style="color:#0000FF;text-align:left">View Larger Map</a></small>
         </div>
@@ -110,7 +132,7 @@
         </div>
         
         <div id="donateModal" class="reveal-modal small" align="center">
-            <h2>Map Here</h2>
+            <h3>Thank you for your donation!</h3>
         </div>
         
         <div id="speechModal" class="reveal-modal small" align="center">
